@@ -1,0 +1,46 @@
+# LangChain Core
+langchain
+langchain_core
+langchain-community
+
+# LangChain Vector DB (Qdrant)
+langchain_qdrant
+qdrant-client
+
+# OpenAI Integration
+langchain-openai
+openai
+
+# LangChain Ollama
+langchain-ollama
+
+# Anthropic Integration
+langchain-anthropic
+
+# Groq
+langchain-groq
+
+# Google Gemini (PaLM) Integration
+langchain-google-genai
+google-generativeai
+
+# Hugging Face Integration
+langchain-huggingface
+transformers
+sentence-transformers
+huggingface-hub
+
+# Environment Variable Management
+python-dotenv
+
+# ML Utilities
+numpy
+pandas
+streamlit
+scikit-learn
+torchvision
+tiktoken
+pypdf
+
+# Youtube Transcript
+youtube_transcript_api

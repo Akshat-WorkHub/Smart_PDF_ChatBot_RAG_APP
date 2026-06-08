@@ -1,0 +1,161 @@
+/* ==========================================
+   GLOBAL APP & LAYOUT RESET
+   ========================================== */
+:root {
+    --bg-main: #F5F5F0;        /* Linen - Soft, warm tinted background */
+    --bg-surface: #ffffff;     /* Pure White - For crisp structural containers */
+    --bg-sidebar: #E6D8C3;     /* Alabaster/Sand - Rich warm sidebar tone */
+    --border-color: #C2A68C;   /* Terracotta Tan - Elegant soft border lines */
+    
+    /* Typography Colors */
+    --text-main: #000f09;      /* Deep Charcoal - High contrast, softer than pure black */
+    --text-muted: #5f472c;     /* Warm Muted Brown - For subtitles and labels */
+    
+    /* Interface Accents */
+    --primary: #5D866C;        /* Sage Green - Calm, professional primary anchor */
+    --primary-light: #EBF2EE;  /* Faint Green Wash - Warm tint for user chat bubbles */
+}
+
+/* Base application wrapper canvas styling */
+.stApp {
+    background-color: var(--bg-main) !important;
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Adjusting main container padding for wide layouts */
+.block-container {
+    padding: 2.5rem 3rem !important;
+    max-width: 1400px !important;
+}
+
+/* ==========================================
+   HEADER SECTION
+   ========================================== */
+.title {
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -0.75px;
+    margin-bottom: 8px;
+    color: var(--text-main); /* High contrast header title */
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+    letter-spacing: 0.1px;
+}
+
+/* ==========================================
+   SIDEBAR & CONFIGURATION (Warm Neutral Rail)
+   ========================================== */
+[data-testid="stSidebar"] {
+    background-color: var(--bg-sidebar) !important;
+    border-right: 1px solid var(--border-color) !important;
+}
+
+/* Forces all sidebar text elements to stay visible and sharp */
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] p, 
+[data-testid="stSidebar"] span, 
+[data-testid="stSidebar"] label {
+    color: var(--text-main) !important;
+    font-weight: 600;
+}
+
+/* Styling for native file upload drop zone */
+[data-testid="stFileUploader"] section {
+    background-color: var(--bg-surface) !important;
+    border: 1px dashed var(--border-color) !important;
+    border-radius: 12px !important;
+}
+
+/* ==========================================
+   INTERACTIVE COMPONENTS & INTERFACES
+   ========================================== */
+
+/* The primary interactive action buttons (Process PDFs) styled with Sage Green */
+.stButton > button {
+    border: none !important;
+    border-radius: 10px !important;
+    color: white !important;
+    background-color: var(--primary) !important; /* Sage Green background */
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    padding: 0.6rem 1rem !important;
+    box-shadow: 0 4px 6px -1px rgba(93, 134, 108, 0.2) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stButton > button:hover {
+    transform: translateY(-1px);
+    background-color: #4C725A !important; /* Darkened Sage on hover */
+    box-shadow: 0 6px 12px -1px rgba(93, 134, 108, 0.3) !important;
+    color: white !important;
+}
+
+/* Document stats cards styling */
+[data-testid="metric-container"] {
+    background-color: var(--bg-surface) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 14px !important;
+    padding: 16px 20px !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02) !important;
+    margin-bottom: 15px !important;
+}
+
+[data-testid="stMetricValue"] div,
+[data-testid="stMetricValue"] span {
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    color: var(--text-main) !important;
+}
+
+[data-testid="stMetricLabel"] label,
+[data-testid="stMetricLabel"] p {
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    font-weight: 600 !important;
+    color: var(--text-muted) !important;
+}
+
+/* ==========================================
+   CONVERSATIONAL UI CHAT WORKSPACE
+   ========================================== */
+.stChatMessage {
+    border-radius: 14px !important;
+    padding: 16px !important;
+    margin-bottom: 12px !important;
+}
+
+/* User Message Bubble - Soft Sage Tint */
+[data-testid="stChatMessageUser"] {
+    background-color: var(--primary-light) !important;
+    border: 1px solid #D6E4DC !important; 
+}
+[data-testid="stChatMessageUser"] p, 
+[data-testid="stChatMessageUser"] span {
+    color: #344E3E !important; /* Rich Dark Sage text for clear contrast */
+}
+
+/* Assistant Message Bubble - Clean Surface White Card */
+[data-testid="stChatMessageAssistant"] {
+    background-color: var(--bg-surface) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02) !important;
+}
+
+/* Sticky input text bar alignment styling fixes */
+[data-testid="stChatInput"] {
+    border-radius: 14px !important;
+    border: 1px solid var(--border-color) !important;
+    background-color: var(--bg-surface) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.03) !important;
+}
