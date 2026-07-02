@@ -41,6 +41,8 @@ scikit-learn
 torchvision
 tiktoken
 pypdf
+fastapi[standard]
+python-multipart
 
 # Youtube Transcript
 youtube_transcript_api

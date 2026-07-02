@@ -11,3 +11,7 @@ wheels/
 
 # Secrets
 .env
+
+PDF_Files
+Notebook
+Chat_History
